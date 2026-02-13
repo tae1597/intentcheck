@@ -53,12 +53,12 @@
       A Rust CLI tool that verifies SEO and AI-search consistency between Title, Meta Description, H1 and Page Content.
     </p>
 
-    <a class="btn btn-primary" href="https://github.com/tae1597/intentcheck" target="_blank" rel="noopener noreferrer">
-      Download on GitHub
-    </a>
-    <a class="btn btn-outline" href="https://github.com/tae1597/intentcheck" target="_blank" rel="noopener noreferrer">
-      View Source Code
-    </a>
+    <a class="btn btn-primary" href="https://github.com/tae1597/intentcheck/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer">
+  Download ZIP
+</a>
+<a class="btn btn-outline" href="https://github.com/tae1597/intentcheck" target="_blank" rel="noopener noreferrer">
+  View on GitHub
+</a>
 
     <div class="card">
       <h2>Why IntentCheck?</h2>
@@ -89,6 +89,22 @@
 cargo run -- analyze site/ --top 3 --report-md report.md
 cargo run -- analyze https://example.com --fail-under 60</code></pre>
     </div>
+
+    <div class="card">
+  <h2>Quick Start (no install)</h2>
+  <ol>
+    <li>Download the ZIP from this page</li>
+    <li>Unzip it and open a terminal in the folder</li>
+    <li>Run:</li>
+  </ol>
+  <pre><code>cargo run -- analyze test.html
+cargo run -- analyze site/ --top 3 --report-md report.md
+cargo run -- analyze https://example.com</code></pre>
+  <p style="color:#6b7280; margin:10px 0 0;">
+    Requires Rust toolchain (rustup + cargo).
+  </p>
+</div>
+
 
     <div class="card">
       <h2>Who is it for?</h2>
