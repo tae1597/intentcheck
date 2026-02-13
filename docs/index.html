@@ -1,3 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IntentCheck — SEO & AI Search Consistency Tool</title>
+  <meta name="description" content="IntentCheck is a Rust CLI tool that verifies semantic consistency between title, meta description, H1 and page content. Built for the AI-search era." />
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    h1 { font-size: 40px; margin: 0 0 10px; }
+    h2 { margin: 0 0 12px; }
+    .subtitle { font-size: 18px; color: #6b7280; margin: 0 0 28px; }
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      margin: 18px 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 12px 12px 0;
+    }
+    .btn-primary { background: #111827; color: white; }
+    .btn-outline { border: 1px solid #111827; color: #111827; }
+    pre, code { background: #f3f4f6; border-radius: 10px; }
+    pre { padding: 16px; overflow-x: auto; margin: 0; }
+    ul { margin: 10px 0 0 20px; }
+    footer { margin-top: 48px; font-size: 14px; color: #6b7280; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>IntentCheck</h1>
+    <p class="subtitle">
+      A Rust CLI tool that verifies SEO and AI-search consistency between Title, Meta Description, H1 and Page Content.
+    </p>
+
+    <a class="btn btn-primary" href="https://github.com/tae1597/intentcheck/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer">
+  Download ZIP
+</a>
+<a class="btn btn-outline" href="https://github.com/tae1597/intentcheck" target="_blank" rel="noopener noreferrer">
+  View on GitHub
+</a>
+
+    <div class="card">
+      <h2>Why IntentCheck?</h2>
+      <p>
+        In the AI-search era, search engines and AI assistants evaluate content based on semantic clarity and internal consistency.
+        Many pages publish titles and descriptions that do not match the actual content.
+      </p>
+      <p>
+        IntentCheck flags these issues before publishing, helping improve clarity, credibility and discoverability.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Core Features</h2>
+      <ul>
+        <li>Semantic overlap scoring (Title / Meta / H1 vs Body)</li>
+        <li>Thin content detection</li>
+        <li>Folder-wide analysis for static sites</li>
+        <li>Outlier detection across pages</li>
+        <li>JSON &amp; Markdown report export</li>
+        <li>CI-ready <code>--fail-under</code> quality gate</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Example Usage</h2>
+      <pre><code>cargo run -- analyze page.html
+cargo run -- analyze site/ --top 3 --report-md report.md
+cargo run -- analyze https://example.com --fail-under 60</code></pre>
+    </div>
+
+    <div class="card">
+  <h2>Quick Start (no install)</h2>
+  <ol>
+    <li>Download the ZIP from this page</li>
+    <li>Unzip it and open a terminal in the folder</li>
+    <li>Run:</li>
+  </ol>
+  <pre><code>cargo run -- analyze test.html
+cargo run -- analyze site/ --top 3 --report-md report.md
+cargo run -- analyze https://example.com</code></pre>
+  <p style="color:#6b7280; margin:10px 0 0;">
+    Requires Rust toolchain (rustup + cargo).
+  </p>
+</div>
+
+
+    <div class="card">
+      <h2>Who is it for?</h2>
+      <ul>
+        <li>Developers building static websites</li>
+        <li>Students learning SEO fundamentals</li>
+        <li>Startups validating content clarity</li>
+        <li>Small website owners improving discoverability</li>
+      </ul>
+    </div>
+
+
 <div class="card">
   <h2>Demo (Good Example)</h2>
   <p>Example of a consistent page (high alignment).</p>
@@ -11,3 +130,11 @@
   <a class="btn btn-outline" href="./bad_demo_page.html">Open bad page</a>
   <a class="btn btn-outline" href="./bad_demo_report.md">Open bad report</a>
 </div>
+
+
+    <footer>
+      Built as part of a Digital Business course project. Combining technical depth (Rust CLI) with real-world business value.
+    </footer>
+  </div>
+</body>
+</html>
