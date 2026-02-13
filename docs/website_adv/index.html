@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IntentCheck — AI-Search Ready SEO Validator</title>
+
+<meta name="description" content="IntentCheck is a Rust-based SEO consistency validator that ensures semantic alignment between Title, Meta description, H1 and Body content. Designed for the AI-search era.">
+
+<style>
+:root{
+  --bg:#0a0f1f;
+  --card:#111832;
+  --accent:#6f7cff;
+  --accent2:#00d4ff;
+  --text:#f2f5ff;
+  --muted:#9aa3c7;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:linear-gradient(180deg,#0a0f1f,#0f1733);
+  color:var(--text);
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+h1{
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+h2{
+  margin-top:60px;
+  font-size:26px;
+}
+
+p{
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.hero{
+  text-align:center;
+  padding:80px 0;
+}
+
+.badge{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:20px;
+  background:rgba(111,124,255,0.2);
+  color:var(--accent2);
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 20px;
+  margin:10px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.2s;
+}
+
+.primary{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#000;
+}
+
+.secondary{
+  border:1px solid var(--accent);
+  color:var(--accent);
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.card{
+  background:var(--card);
+  padding:25px;
+  border-radius:14px;
+  margin-top:20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+footer{
+  text-align:center;
+  padding:40px 0;
+  color:var(--muted);
+  margin-top:60px;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<section class="hero">
+  <div class="badge">Built for the AI-search era</div>
+  <h1>IntentCheck</h1>
+  <p>
+    A lightweight Rust CLI tool that validates whether your page structure
+    truly matches its content.
+  </p>
+
+  <a class="btn primary" href="https://github.com/tae1597/intentcheck" target="_blank">View on GitHub</a>
+  <a class="btn secondary" href="../index.html">Back to Main Site</a>
+</section>
+
+<section>
+  <h2>Why It Matters</h2>
+  <p>
+    Modern search engines increasingly rely on AI-based semantic understanding.
+    If your title says one thing but your content says another, your page can be
+    misunderstood or ignored.
+  </p>
+</section>
+
+<section>
+  <h2>Core Features</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Semantic Consistency Score</h3>
+      <p>Scores alignment between Title, Meta description, H1 and Body.</p>
+    </div>
+
+    <div class="card">
+      <h3>Mismatch Detection</h3>
+      <p>Identifies missing key terms and structural inconsistencies.</p>
+    </div>
+
+    <div class="card">
+      <h3>CI Integration</h3>
+      <p>Use <code>--fail-under</code> to automatically block low-quality content.</p>
+    </div>
+
+    <div class="card">
+      <h3>Markdown Reports</h3>
+      <p>Generate shareable reports for documentation and audits.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Example Commands</h2>
+
+  <div class="card">
+<pre>
+cargo run -- analyze page.html
+cargo run -- analyze site/ --fail-under 60
+cargo run -- analyze https://example.com --report-md report.md
+</pre>
+  </div>
+</section>
+
+<footer>
+  IntentCheck — Rust-based SEO & AI-search validator  
+  <br><br>
+  Developed for a Digital Business course project.
+</footer>
+
+</div>
+</body>
+</html>
