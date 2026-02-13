@@ -2,11 +2,11 @@
 
 **Input:** `docs/demo_page.html`
 
-**Score:** **75/100**
+**Score:** **100/100**
 
 **Title:** IntentCheck SEO Consistency Checker
 
-**Meta description:** IntentCheck SEO consistency checker checks title meta description and h1 for content consistency and alignment.
+**Meta description:** IntentCheck SEO consistency checker that checks title, meta description and H1 for content consistency and alignment.
 
 **H1:** IntentCheck SEO Consistency Checker
 
@@ -14,14 +14,17 @@
 
 - consistency
 - seo
-- intentcheck
-- checker
-- title
-- alignment
 - content
+- intentcheck
+- page
+- title
+- checker
 - description
-- meta
+- match
+- written
 
 ## Warnings
 
-- None ✅
+- Title coverage in body: 100%.
+- Meta coverage in body: 90%.
+- H1 coverage in body: 100%.
