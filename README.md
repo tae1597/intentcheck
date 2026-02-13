@@ -4,6 +4,9 @@ IntentCheck is a command-line SEO and content consistency analyzer written in Ru
 
 It evaluates how well a webpage’s content aligns with its title, meta description, and main heading. The goal is to detect mismatches, weak structure, thin content, and low semantic alignment — especially relevant in the age of AI-driven search.
 
+IntentCheck also helps evaluate AI-search readiness, ensuring that AI assistants and semantic search systems can clearly interpret the intended topic of a page.
+
+
 ---
 
 ## Why IntentCheck?
@@ -128,6 +131,25 @@ Warnings:
 * Small website owners
 * Early-stage projects
 * Content editors validating consistency
+
+## Compatibility
+
+IntentCheck is written in Rust and is fully cross-platform.
+
+It compiles and runs on:
+- Windows
+- macOS
+- Linux
+
+Requirements:
+- Rust (installed via rustup)
+- Cargo (included with Rust)
+
+Build on any system with:
+
+cargo build --release
+
+The same source code works across operating systems without modification.
 
 ---
 
