@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IntentCheck — SEO Consistency Tool</title>
+  <meta name="description" content="IntentCheck is a Rust CLI tool that checks if a webpage's content matches its title, meta description and H1. Includes folder scan, URL scan, JSON and Markdown reports." />
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.5; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 48px 20px; }
+    .card { border: 1px solid #e5e7eb; border-radius: 16px; padding: 18px; margin: 14px 0; }
+    .btn { display: inline-block; padding: 10px 14px; border-radius: 10px; border: 1px solid #111827; text-decoration: none; color: #111827; }
+    code, pre { background: #f3f4f6; border-radius: 10px; padding: 2px 6px; }
+    pre { padding: 14px; overflow: auto; }
+    h1 { margin-top: 0; }
+    .muted { color: #6b7280; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>IntentCheck</h1>
+    <p class="muted">A Rust CLI tool to verify SEO + AI-search consistency: Title / Meta / H1 vs Page Content.</p>
+
+    <div class="card">
+      <h2>What it does</h2>
+      <p>IntentCheck checks whether a page communicates a consistent topic across its title, meta description, main heading, and body content. It helps catch mismatches, thin content, and unclear positioning before publishing.</p>
+    </div>
+
+    <div class="card">
+      <h2>Install & Run</h2>
+      <pre><code>cargo run -- analyze page.html
+cargo run -- analyze site/ --top 3 --report-md report.md
+cargo run -- analyze https://example.com --report-md url_report.md</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>Download</h2>
+      <p>For now, download the source code from GitHub and run it locally.</p>
+      <p><a class="btn" href="../">Open GitHub Repository</a></p>
+      <p class="muted">Later you can add prebuilt binaries (Windows/macOS/Linux) in GitHub Releases.</p>
+    </div>
+
+    <div class="card">
+      <h2>Why it matters now</h2>
+      <p>Search is changing fast: more people find content through AI assistants. Consistent, clear pages are easier to understand and recommend. IntentCheck helps validate that consistency.</p>
+    </div>
+
+    <p class="muted">Built for a Digital Business course project.</p>
+  </div>
+</body>
+</html>
