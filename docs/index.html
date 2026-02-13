@@ -3,49 +3,130 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IntentCheck — SEO Consistency Tool</title>
-  <meta name="description" content="IntentCheck is a Rust CLI tool that checks if a webpage's content matches its title, meta description and H1. Includes folder scan, URL scan, JSON and Markdown reports." />
+  <title>IntentCheck — SEO & AI Search Consistency Tool</title>
+  <meta name="description" content="IntentCheck is a Rust CLI tool that verifies semantic consistency between title, meta description, H1 and page content. Built for the AI-search era." />
+
   <style>
-    body { font-family: system-ui, Arial, sans-serif; margin: 0; padding: 0; line-height: 1.5; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 48px 20px; }
-    .card { border: 1px solid #e5e7eb; border-radius: 16px; padding: 18px; margin: 14px 0; }
-    .btn { display: inline-block; padding: 10px 14px; border-radius: 10px; border: 1px solid #111827; text-decoration: none; color: #111827; }
-    code, pre { background: #f3f4f6; border-radius: 10px; padding: 2px 6px; }
-    pre { padding: 14px; overflow: auto; }
-    h1 { margin-top: 0; }
-    .muted { color: #6b7280; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #6b7280;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 12px;
+    }
+
+    .btn-primary {
+      background: #111827;
+      color: white;
+    }
+
+    .btn-outline {
+      border: 1px solid #111827;
+      color: #111827;
+    }
+
+    code, pre {
+      background: #f3f4f6;
+      border-radius: 10px;
+    }
+
+    pre {
+      padding: 16px;
+      overflow-x: auto;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #6b7280;
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
+
     <h1>IntentCheck</h1>
-    <p class="muted">A Rust CLI tool to verify SEO + AI-search consistency: Title / Meta / H1 vs Page Content.</p>
+    <p class="subtitle">
+      A Rust CLI tool that verifies SEO and AI-search consistency between Title, Meta Description, H1 and Page Content.
+    </p>
+
+    <a class="btn btn-primary" href="https://github.com/tae1597/intentcheck" target="_blank">
+      Download on GitHub
+    </a>
+
+    <a class="btn btn-outline" href="https://github.com/tae1597/intentcheck" target="_blank">
+      View Source Code
+    </a>
 
     <div class="card">
-      <h2>What it does</h2>
-      <p>IntentCheck checks whether a page communicates a consistent topic across its title, meta description, main heading, and body content. It helps catch mismatches, thin content, and unclear positioning before publishing.</p>
+      <h2>Why IntentCheck?</h2>
+      <p>
+        In the AI-search era, search engines and AI assistants evaluate content based on semantic clarity and internal consistency.
+        Many websites publish pages where titles, meta descriptions and body content do not align.
+      </p>
+      <p>
+        IntentCheck detects these inconsistencies before publishing, helping developers and content creators
+        improve clarity, credibility and discoverability.
+      </p>
     </div>
 
     <div class="card">
-      <h2>Install & Run</h2>
+      <h2>Core Features</h2>
+      <ul>
+        <li>Semantic overlap scoring (Title / Meta / H1 vs Body)</li>
+        <li>Thin content detection</li>
+        <li>Folder-wide analysis for static sites</li>
+        <li>Outlier detection across pages</li>
+        <li>JSON & Markdown report export</li>
+        <li>CI-ready <code>--fail-under</code> quality gate</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Example Usage</h2>
       <pre><code>cargo run -- analyze page.html
 cargo run -- analyze site/ --top 3 --report-md report.md
-cargo run -- analyze https://example.com --report-md url_report.md</code></pre>
+cargo run -- analyze https://example.com --fail-under 60</code></pre>
     </div>
 
     <div class="card">
-      <h2>Download</h2>
-      <p>For now, download the source code from GitHub and run it locally.</p>
-      <p><a class="btn" href="../">Open GitHub Repository</a></p>
-      <p class="muted">Later you can add prebuilt binaries (Windows/macOS/Linux) in GitHub Releases.</p>
-    </div>
-
-    <div class="card">
-      <h2>Why it matters now</h2>
-      <p>Search is changing fast: more people find content through AI assistants. Consistent, clear pages are easier to understand and recommend. IntentCheck helps validate that consistency.</p>
-    </div>
-
-    <p class="muted">Built for a Digital Business course project.</p>
-  </div>
-</body>
-</html>
+      <h2>Who
