@@ -3,7 +3,7 @@ name: Build Linux binaries
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
         run: cargo install cross --locked
 
       - name: Build x86_64 Linux (release)
-       run: cross build --release --target x86_64-unknown-linux-gnu
+        run: cross build --release --target x86_64-unknown-linux-gnu
 
       - name: Build aarch64 Linux (release)
         run: cross build --release --target aarch64-unknown-linux-gnu
